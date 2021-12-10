@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-test  
+  name: iamserver-devops-test  
   labels:
-    app: devops-test 
+    app: iamserver-devops-test
 spec:
-  replicas: 4
+  replicas: 3
   selector:
      matchLabels:
        app: devops-test 
@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       labels:
-        app: devops-test 
+        app: iamserver-devops-test 
     spec:
       containers:
-        - name: devops-test 
+        - name: iamserver-devops-test
           image: 72122322405.dkr.ecr.us-west-2.amazonaws.com/devops-test:{{IMAGE_VERSION}}
           ports:
             - containerPort: 3000
