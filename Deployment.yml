@@ -50,7 +50,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops-test  
+  name: iamserver-devops-test  
 spec:
   type: ClusterIP
   ports:
